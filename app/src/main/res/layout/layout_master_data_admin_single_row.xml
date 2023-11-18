@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="12dp"
+    android:orientation="vertical"
+    android:background="@color/teal_700"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txt_sr_no"
+            android:layout_width="40dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:text="Sr No"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+        <EditText
+            android:id="@+id/et_company_id"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:editable="false"
+            android:focusable="false"
+            android:enabled="false"
+            android:text="Worker Id"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        <View
+            android:layout_width="1dp"
+
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:text="@string/name"
+            android:editable="false"
+            android:focusable="false"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+        <EditText
+            android:id="@+id/et_type"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/labour_type"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:editable="false"
+            android:focusable="false"
+            android:enabled="false"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+        <EditText
+            android:id="@+id/et_father_name"
+            android:layout_width="100dp"
+
+            android:layout_height="wrap_content"
+            android:text="@string/father_name"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_marginStart="8dp"
+            android:editable="false"
+            android:focusable="false"
+            android:enabled="false"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+        <EditText
+            android:id="@+id/uniqueId"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/unique_id"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:editable="false"
+            android:focusable="false"
+            android:enabled="false"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+        <EditText
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:editable="false"
+            android:focusable="false"
+            android:text="@string/image"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+        <EditText
+            android:id="@+id/et_wages"
+            android:layout_width="50dp"
+            android:editable="false"
+            android:focusable="false"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:text="@string/wages"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_edit"
+            android:background="@null"/>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/black"/>
+
+
+</LinearLayout>

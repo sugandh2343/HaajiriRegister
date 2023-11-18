@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.skillzoomer_Attendance.com">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- <uses-permission android:name="android.Manifest.permission.READ_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="replace" /> &lt;!&ndash; <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> &ndash;&gt; -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="replace"/> -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_logo1"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_app_logo1_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Attendance">
+        <activity
+            android:name=".Activity.ShowLeaveRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EmployeeReportHome"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EmployeeProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddHoliday"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AllEmployeeAttendanceReport"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EmployeeAttendanceReport"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ViewEventsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddAnnouncement"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EventnAnnouncementHome"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EmpMasterData"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ViewLeavePolicy"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddNewSalaryPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SalaryPolicyHome"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddNewPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PolicyHome"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.LeavePolicyHome"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SendNotification"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.GetSingleUserDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdminDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EmployeeLeave"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EmployeeRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.WorkplaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EmployeeDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ShowLabourData"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TransferLabourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DownloadChatActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AssociateDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.DownloadMasterData"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AddWorkPlaceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.TimelineOtherIndustry1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.GetUserDetails"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.CategoryActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ReplyActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AdminChatActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ChattingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.EditAttendanceActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ForgotPasswordActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.TransactionDetailsActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.TransactionListActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.DayBookListActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AdminLoginOptions"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AdminSiteActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.RequestListActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.EditLabourActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PendingLabourActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PicActivityAdmin"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PicActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Adapter.TableView"
+            android:alwaysRetainTaskState="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.LanguageChange"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.WelcomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.NestedRecyclerView"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ReportHome"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AttendanceActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.MemberTimelineTemp"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.MapsActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.CheckAttendanceActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.LoginPic"
+            android:alwaysRetainTaskState="false"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShowCompileListActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ShowPaymentActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ExpensesActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ReceiveCashActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.FundRequestActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Activity.MakePaymentActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.View_paymentReport"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ManpowerHomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.UpdateSiteActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.SearchForLabourPayment"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AboutActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ActivityProfile"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.ActivitySowap"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.splashgif"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.AdvancesHomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.PaymentActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.MemberTimelineActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShowAttendanceActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchForLabour"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ViewMasterDataSheet"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.timelineActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SiteActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LabourRegistration"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddSiteActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddResourcesActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|layoutDirection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="example.com"
+                    android:pathPrefix="/"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="example.com"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="haajiri1.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="haajiri1.page.link"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.MainActivity"
+            android:configChanges="locale|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".FireBaseMassaging"
+            android:directBootAware="true"
+            android:exported="false"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/drivericon" />
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/teal_200" />
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

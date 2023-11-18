@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take a Selfie"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+       android:src="@drawable/my_profile" />
+
+
+    <Button
+        android:id="@+id/btn_selfie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take a selfie" />
+
+
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Selefie" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/you_have_5_min_and_30_sec_to_upload_your_selfie_else_you_will_be_forced_logout"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/txt_forcedLogout_msg"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="5 minutes 30sec"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+
+</LinearLayout>

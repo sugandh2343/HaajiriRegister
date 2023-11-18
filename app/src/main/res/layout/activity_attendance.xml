@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AttendanceActivity">
+<!--    toolbar layout-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-12dp"
+        android:visibility="visible"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="12dp">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:pointerIcon="wait">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_toolbar"
+            android:background="@null"
+            android:layout_gravity="start"
+           />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <!--    force logout layout-->
+    <LinearLayout
+        android:id="@+id/ll_forceLogout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="12dp"
+        android:layout_height="40dp"
+        android:background="@color/red"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/you_have_5_min_and_30_sec_to_upload_your_selfie_else_you_will_be_forced_logout"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/txt_forcedLogout_msg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:text="5 minutes 30sec"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!--    MAin Attendance Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_forceLogout"
+        android:visibility="visible"
+        android:orientation="vertical">
+        <!--    select worker type layout-->
+    <LinearLayout
+        android:id="@+id/ll_worker_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_forceLogout"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/User_Card"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:contentPadding="4dp"
+            app:rippleColor="#DDDDDD"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:outlineSpotShadowColor="#0091EA">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/usericon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skilled"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.3"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Driver_Card"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:contentPadding="4dp"
+            app:rippleColor="#DDDDDD"
+            android:outlineSpotShadowColor="#0091EA">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drivericon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unskilled"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.3"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+<!--Take Attendance layout-->
+    <LinearLayout
+        android:id="@+id/ll_main_attendance"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_worker_type"
+        android:layout_above="@+id/bottom_toolbar"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tv_speech_to_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/baskervville1"
+                android:maxLines="5"
+                android:padding="10dp"
+                android:text="@string/tap_mic_and_speak"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/iv_mic"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_mic_24"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Or type the name of worker to search. Press space after name ends"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/darkBlue"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"/>
+        <EditText
+            android:id="@+id/et_search_labour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableEnd="@drawable/ic_keyboard"
+            android:drawablePadding="5dp"
+            android:hint="Type Here"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:id="@+id/tv_todays_attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:text="Search Results" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dataList"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="visible"
+            android:background="@drawable/shape_recycler_view_background"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/layout_attendance_master_single_row"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:itemCount="5"/>
+
+
+
+    </LinearLayout>
+<!--    Workers Marked Present List-->
+    <LinearLayout
+        android:id="@+id/ll_present_labour_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_worker_type"
+        android:visibility="gone"
+        android:layout_above="@+id/bottom_toolbar"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_present_labour"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            tools:listitem="@layout/list_attendance_single_row"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:itemCount="5"/>
+        <TextView
+            android:id="@+id/tv_no_labour_present"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:text="@string/no_labour_marked_pesent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_marked_present"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3.01"
+        android:background="@drawable/shape_recycler_view_background"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:text="Marked Present"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.01"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="40dp"
+            android:weightSum="2"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_skilled_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+
+                android:weightSum="4.01">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="Skilled"
+                    android:textColor="@color/black"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="0.01"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+                <TextView
+                    android:id="@+id/txt_skilled_count"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="0/0"
+                    android:textColor="@color/black"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_viewSkilled"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:visibility="visible"
+                    android:text="View"
+                    android:background="@drawable/button_success"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/back_skilled"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Back"
+                    android:background="@drawable/button_success"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+            <LinearLayout
+                android:id="@+id/ll_unskilled_total"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:weightSum="4.01">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="Unskilled"
+                    android:textColor="@color/black"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="0.01"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+                <TextView
+                    android:id="@+id/txt_unskilled_count"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="0/0"
+                    android:textColor="@color/black"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_viewUnskilled"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="View"
+                    android:background="@drawable/button_success"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_backUnskilled"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Back"
+                    android:background="@drawable/button_success"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+    <!--    bottom toolbar layout-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-12dp"
+        android:visibility="visible"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/lightGreen"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <ImageView
+                    android:id="@+id/homeicon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/home2"
+                    android:backgroundTint="#0091EA" />
+
+                <TextView
+                    android:id="@+id/hometxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Home"
+                    android:textColor="#5C5C5C" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_manpower"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bookingicon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_manpower"
+                    android:backgroundTint="#0091EA" />
+
+                <TextView
+                    android:id="@+id/bookingtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Man-Power"
+                    android:textColor="#5C5C5C" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_payment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/payouticon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_payment"
+                    android:backgroundTint="#0091EA" />
+
+                <TextView
+                    android:id="@+id/payouttxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="Cash"
+                    android:textColor="#5C5C5C" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

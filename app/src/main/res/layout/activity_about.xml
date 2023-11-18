@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back420"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/toolbarll"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+
+        >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/toolbarll"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        >-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_gravity="top|end"/>-->
+
+<!--    </LinearLayout>-->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:gravity="center_horizontal"
+            >
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/relLayoutWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/txtWebsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Website: "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/websiteLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtWebsite"
+                    android:gravity="start"
+                    android:text="https://skillzoomers.com/hajiri-register/"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/relLayoutWebsite"
+                android:id="@+id/relLayoutForEmail"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Email: "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/goToEmail"
+                    android:layout_toEndOf="@id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="hajiriskillszoomers@gmail.com"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@id/relLayoutForEmail"
+                android:id="@+id/relLayoutForContact"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Contact No: "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+                <TextView
+
+                    android:layout_toEndOf="@id/txtContact"
+                    android:id="@+id/contactOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="9696956402"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/contactTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@id/contactOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text=",  9793980969"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtWatchTutorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Watch tutorial on YouTube"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/relLayoutForContact"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoToYouTube"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtWatchTutorial"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_success"
+                android:text="HaajiriRegister at YouTube"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back420"
+    tools:context=".Activity.DownloadChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_select_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/et_download_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_drop_down_selector"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/select_site"
+                android:textColorHint="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_select_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/btn_today"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/complete"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/btn_custom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/custom"
+                android:textColor="@color/black"
+
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/Fromdate_et"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:hint="@string/from"
+                android:inputType="none"
+                android:padding="8dp" />
+
+            <EditText
+                android:id="@+id/Todate_et"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:hint="@string/to"
+                android:inputType="none"
+                android:padding="8dp" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_download_report"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/download_report"
+            android:background="@drawable/button_success"
+            android:textColor="@color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:textSize="18sp"
+            android:visibility="visible"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

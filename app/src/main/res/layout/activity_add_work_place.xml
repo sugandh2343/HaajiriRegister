@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back420"
+    tools:context=".Activity.AddWorkPlaceActivity">
+    <LinearLayout
+        android:id="@+id/ll_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="115dp"
+        android:visibility="visible"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Your Work Place Here"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:textSize="16sp"/>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:orientation="vertical">-->
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner_workPlaceType"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:spinnerMode="dropdown"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_to_whom"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Select Members to be alloted to this Tentative WorkPlace?"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"/>-->
+<!--            <CheckBox-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Sugandh"/>-->
+
+<!--            <CheckBox-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Member 2"/>-->
+
+
+<!--        </LinearLayout>-->
+
+        <EditText
+            android:id="@+id/et_site_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botton_half"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:hint="Name of Work Place"
+            android:paddingStart="16dp"
+            android:padding="8dp"
+            android:inputType="textCapSentences"
+            android:maxLength="30"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_more_light"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_current_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:layout_marginEnd="12dp"
+                android:drawableStart="@drawable/ic_current_location"
+                android:layout_marginStart="12dp"
+                android:text="Current Location"/>
+            <RadioButton
+                android:id="@+id/rb_map"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+             
+                android:drawableStart="@drawable/ic_map"
+                android:text="Select from map"/>
+                
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_height="210dp">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Search for location"
+                android:drawableStart="@drawable/ic_search"
+                android:background="@drawable/shape_curved_background_edit"/>
+
+                        <fragment
+                            android:id="@+id/map"
+                            android:visibility="visible"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+
+            android:weightSum="2">
+            <LinearLayout
+                android:id="@+id/ll_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="16dp"
+                android:background="@drawable/shape_curved_background_edit"
+                android:weightSum="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select the range of area to mark attendance"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/simpleSeekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:max="100"
+                android:min="10"
+                android:progress="10"
+                />
+                <TextView
+                    android:id="@+id/txt_seekBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100m"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@color/gray_more_light"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Latitude"
+
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/et_latitude"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_edit_curved"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+
+                    android:textColorHint="@color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Longitude"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/et_longitude"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/back_edit_curved"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+
+                    android:textColorHint="@color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/back_edit_curved"
+
+                    android:inputType="textCapSentences"
+                    android:padding="8dp"
+                    android:paddingStart="16dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+        </LinearLayout>
+        
+        
+
+<!--        <EditText-->
+<!--            android:id="@+id/et_city"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@drawable/botton_half"-->
+<!--            android:hint="@string/enter_city"-->
+<!--            android:inputType="textCapSentences"-->
+<!--            android:maxLength="13"-->
+<!--            android:padding="8dp"-->
+
+<!--            android:textColor="@color/white"-->
+<!--            android:textColorHint="@color/white" />-->
+
+<!--       <EditText-->
+<!--            android:id="@+id/et_search_workPlace"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/back_edit_curved"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:padding="8dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:inputType="textCapSentences"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:hint="Search for site Location" -->
+<!--            android:textColor="@color/black" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/back_edit_curved"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+<!--                        <fragment-->
+<!--                            android:id="@+id/map"-->
+<!--                            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--                            android:layout_width="match_parent"-->
+
+<!--                            android:layout_height="match_parent" />-->
+
+        </LinearLayout>
+
+
+
+        <!--            android:layout_height="wrap_content" />-->
+
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="32dp"-->
+        <!--            android:layout_marginEnd="32dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:text="Site Created Date"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:paddingStart="16dp"-->
+        <!--            android:inputType="text"-->
+        <!--            android:maxLength="30"/>-->
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_success"
+            android:padding="4dp"
+            android:text="Next"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Branch Policies"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/et_site_created_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botton_half"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:paddingStart="16dp"
+            android:visibility="gone"
+            android:textColorHint="@color/white"
+            android:focusable="false"
+            android:layout_marginTop="0dp"
+            android:clickable="false"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:hint="@string/site_created_date1"
+            android:inputType="text"
+            android:maxLength="30"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/you_have_to_freeze_site_working_hours_below_and_can_be_modified_as_per_your_requirement"/>
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/et_EndTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/start_time"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:drawableEnd="@drawable/ic_time"
+                android:inputType="none"
+
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/et_startTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/end_time"
+                android:drawableEnd="@drawable/ic_time"
+                android:drawablePadding="8dp"
+                android:inputType="none"
+                android:padding="8dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Working Hours"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/et_hours"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:enabled="false"
+                android:background="@drawable/back_edit_curved"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=" Hours"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/et_min"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/back_edit_curved"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:enabled="false"
+                android:textColorHint="@color/black" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Min"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Weekly off"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:weightSum="7">
+
+                <CheckBox
+                    android:id="@+id/cb_monday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/babyPink"
+                    android:gravity="center"
+                    android:text="Monday" />
+
+                <CheckBox
+                    android:id="@+id/cb_tuesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/lightGreen"
+                    android:gravity="center"
+                    android:text="Tuesday" />
+
+                <CheckBox
+                    android:id="@+id/cb_wednesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/babyPink"
+                    android:gravity="center"
+                    android:text="Wednesday" />
+
+                <CheckBox
+                    android:id="@+id/cb_thursday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/lightGreen"
+                    android:gravity="center"
+                    android:text="Thursday" />
+
+                <CheckBox
+                    android:id="@+id/cb_friday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/babyPink"
+                    android:gravity="center"
+                    android:text="Friday" />
+
+                <CheckBox
+                    android:id="@+id/cb_saturday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/lightGreen"
+                    android:gravity="center"
+                    android:text="Saturday" />
+                <CheckBox
+                    android:id="@+id/cb_sunday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/babyPink"
+                    android:gravity="center"
+                    android:text="Sunday" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next1"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_success"
+            android:text="Next"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/ll_third"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Branch Policies"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Do you allow short leave?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_short_leave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_short_leave"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+
+                android:visibility="visible">
+
+                <Spinner
+                    android:id="@+id/spinner_term_short_leave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/spinner_count_short_leave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="for"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_short_leave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="mins"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Do you allow late arrival(limited)?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_late"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_late"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+
+                android:visibility="visible">
+
+                <Spinner
+                    android:id="@+id/spinner_term_late"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/spinner_count_late"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="for"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_late"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="mins"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Do you allow Half Day?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_half_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_half_day"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+
+                android:visibility="visible">
+
+                <Spinner
+                    android:id="@+id/spinner_term_half_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/spinner_count_half_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="120"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="at half time"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_half_day"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_time"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+            </LinearLayout>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_half_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_success"
+                android:padding="8dp"
+                android:text="Next"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/ll_fourth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Do you allow Casual Leave(CL)?"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_cl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spinner_term_cl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="120"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_count_cl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:hint="Enter CL"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="CL"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Do you allow Earned Leave(EL)?"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_el"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_el"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spinner_term_el"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="120"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_count_el"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:hint="Enter EL"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="EL"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Do you allow Sick Leave(SL)?"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_sl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spinner_term_sl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="120"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_count_sl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:hint="Enter SL"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SL"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Do you allow Maternity Leave(ML)?"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spinner_term_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="120"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_count_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:hint="Enter ML"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="ML"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Do you allow Paternity Leave(PL)?"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_pl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            android:orientation="horizontal"
+
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spinner_term_pl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="120"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_count_pl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:hint="Enter PL"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="PL"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_success"
+            android:text="@string/next"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

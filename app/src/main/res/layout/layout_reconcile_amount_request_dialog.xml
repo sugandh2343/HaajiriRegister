@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/requested_reconcile_amount"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txt_reconcile"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Reconcile"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/gray_more_light"/>
+    <TextView
+        android:id="@+id/txt_reason"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:elegantTextHeight="true"
+        android:text="Reason"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_allowed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_allow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/allow"
+            android:background="@color/lightGreen"
+            android:textColor="@color/black"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ask_why"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/ask_why"
+            android:background="@drawable/button_success"
+            android:textColor="@color/black"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_deny"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/deny_reuest"
+            android:background="@color/red"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/gray_more_light"/>
+
+
+
+</LinearLayout>

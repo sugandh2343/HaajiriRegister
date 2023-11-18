@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adapter.TableView">
+    <com.evrencoskun.tableview.TableView
+        android:id="@+id/tableview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:allow_click_inside_cell="false"
+        app:allow_click_inside_column_header="false"
+        app:allow_click_inside_row_header="false">
+
+    </com.evrencoskun.tableview.TableView>
+
+</LinearLayout>

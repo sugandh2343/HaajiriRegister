@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.GetSingleUserDetail">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="1dp"
+        android:layout_marginTop="4dp"
+        app:strokeColor="@color/black">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="User Id"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txt_userId"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Sugandh"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="No of sites"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txt_site_count"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/txt_view"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="View"
+                    android:gravity="center"
+                    android:background="@color/quantum_yellow200"
+                    android:textColor="@color/blue"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_site_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Site id"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.01"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/gray"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="T M"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/gray"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Labours"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/gray"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Attendance"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:background="@color/gray"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_site_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    tools:listitem="@layout/layout_site_display_single"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

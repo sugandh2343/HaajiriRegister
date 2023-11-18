@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.AdminDashboard">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_app_logo1_round"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome Admin"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:background="@color/gray_more_light"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_user"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/gray_more_light"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginEnd="8dp"
+                android:outlineAmbientShadowColor="@color/gray"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="All Users"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/black"/>
+                    <TextView
+                        android:id="@+id/txt_user_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="264"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/gray_more_light"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                android:outlineAmbientShadowColor="@color/gray"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Payments"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/black"/>
+                    <TextView
+                        android:id="@+id/txt_payment_sum"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_notification"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/gray_more_light"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginEnd="8dp"
+                android:outlineAmbientShadowColor="@color/gray"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Total Labours"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/black"/>
+                    <TextView
+                        android:id="@+id/txt_total_labour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/gray_more_light"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                android:outlineAmbientShadowColor="@color/gray"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Total Sites"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/black"/>
+                    <TextView
+                        android:id="@+id/txt_total_site"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_attendance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/gray_more_light"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginEnd="8dp"
+                android:outlineAmbientShadowColor="@color/gray"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Total Attendance Labours"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/black"/>
+                    <TextView
+                        android:id="@+id/txt_total_attendance"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/gray_more_light"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                android:outlineAmbientShadowColor="@color/gray"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Total Associates"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.01"
+                        android:background="@color/black"/>
+                    <TextView
+                        android:id="@+id/txt_total_associates2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Notification"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_success"
+
+            android:padding="8dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

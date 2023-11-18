@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back420"
+
+    android:orientation="vertical"
+    tools:context=".Activity.ShowLabourData">
+    <LinearLayout
+        android:id="@+id/toolbarll"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/btn_download_report"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp">
+        <LinearLayout
+            android:id="@+id/ll_beforeLabourSelect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+          >
+
+
+            <TextView
+                android:id="@+id/txt_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_labour_report"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:background="@color/cream"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_searchType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/btn_bySite"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/by_site"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <RadioButton
+                    android:id="@+id/btn_byLabourDetails"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/by_labour_details"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_search_labour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/et_searchLabour"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="4dp"
+                    android:elegantTextHeight="true"
+                    android:hint="Worker Id/Name/UniqueId/Mobile"/>
+                <ImageView
+                    android:id="@+id/iv_name_mic"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_mic_24"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_select_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:weightSum="1">
+
+                <Spinner
+                    android:id="@+id/spinner_selectSite"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:dropDownSelector="@drawable/ic_drop_down_selector"/>
+                <TextView
+                    android:id="@+id/no_data_to_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You don't have any site with data of labour to show/download. Add Labour Data first"
+                    android:background="@color/red"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_labour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_labour_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/layout_select_labour_single_row"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_proceed"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/proceed_to_download"
+                    android:background="@drawable/button_success"
+                    android:textColor="@color/black"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="24dp"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_afterLabourSelect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/Fromdate_et"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="@string/from"
+                    android:drawableEnd="@drawable/ic_calender"
+                    android:drawablePadding="8dp"
+                    android:inputType="none"
+                    android:padding="8dp" />
+                <EditText
+                    android:id="@+id/Todate_et"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="@string/to"
+                    android:drawableEnd="@drawable/ic_calender"
+                    android:drawablePadding="8dp"
+                    android:inputType="none"
+                    android:padding="8dp" />
+
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/show"
+                android:textColor="@color/black"
+
+                android:textSize="18sp"
+                android:visibility="visible"
+                android:background="@drawable/button_success"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+            <LinearLayout
+                android:id="@+id/ll_list"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <com.evrencoskun.tableview.TableView
+                    android:id="@+id/tableview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:allow_click_inside_cell="false"
+                    app:allow_click_inside_column_header="false"
+                    app:allow_click_inside_row_header="false"/>
+
+                <TextView
+                    android:id="@+id/txt_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/message"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_download_report"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/download_report"
+        android:background="@drawable/button_success"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+</RelativeLayout>

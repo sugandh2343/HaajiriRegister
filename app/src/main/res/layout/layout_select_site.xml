@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+
+
+    <CheckBox
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_spinner"
+        android:text="All Sites"
+        android:paddingStart="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:maxLines="2"
+        android:textAlignment="inherit"
+        android:textColor="@android:color/black"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:background="@color/black"/>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

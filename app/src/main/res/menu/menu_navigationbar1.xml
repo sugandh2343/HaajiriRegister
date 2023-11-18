@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.MainActivity"
+    >
+
+    <item  android:id="@+id/profile"
+        android:title="@string/contact_us"
+        android:icon="@drawable/profile"
+        app:showAsAction="withText"/>
+
+    <item  android:id="@+id/language"
+        android:title="@string/language"
+        app:showAsAction="withText"
+        />
+
+    <item  android:id="@+id/share"
+        android:title="@string/share"
+        app:showAsAction="withText"
+        android:icon="@drawable/share"
+
+        />
+
+    <item  android:id="@+id/youtube"
+        android:title="@string/youtube"
+        app:showAsAction="withText"
+        android:icon="@drawable/youtube"/>
+
+    <item  android:id="@+id/changeWorkOption"
+        android:title="@string/change_work_option"
+        android:visible="false"
+
+        app:showAsAction="withText"
+        android:icon="@drawable/change_work_option"/>
+    <item  android:id="@+id/transaction"
+        android:title="@string/your_transactions"
+
+        app:showAsAction="withText"
+        android:icon="@drawable/change_work_option"/>
+
+
+    <item android:id="@+id/logout"
+        android:title="@string/logout"
+        app:showAsAction="withText"
+        android:icon="@drawable/logout"
+        />
+</menu>

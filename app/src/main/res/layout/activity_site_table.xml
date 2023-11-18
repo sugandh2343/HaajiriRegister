@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back12"
+    tools:context=".Activity.MemberTimelineActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top|end"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="120dp">
+
+            <LinearLayout
+                android:id="@+id/before_locationVerify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/before_you_start_your_activity_n_you_need_to_verify_the_site_location_n_click_on_the_button_below_to_automatically_detect_the_location"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_verify_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/color_secand"
+                    android:gravity="center"
+                    android:letterSpacing="0.15"
+                    android:text="@string/detect_location"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_bottom_layout"
+                android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_after_locationVerify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <LinearLayout
+                    android:id="@+id/ll_forceLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_have_5_min_and_30_sec_to_upload_your_selfie_else_you_will_be_forced_logout"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:id="@+id/txt_forcedLogout_msg"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="5 minutes 30sec"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt_companyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/botton_half"
+                        android:padding="8dp"
+                        android:paddingStart="16dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:padding="8dp"
+
+                            android:paddingStart="10dp"
+                            android:text="@string/work_site"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:paddingStart="16dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/site_id"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/txt_siteName"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/botton_half"
+                            android:padding="8dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txt_site_id"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/botton_half"
+                            android:padding="8dp"
+                            android:paddingStart="16dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_skilled_viewMasterData"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/skilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_second_sec"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="@string/master_data"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_unskilled_viewMasterData"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/un_skilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_skilled_takeAttendance"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/skilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_second_sec"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="@string/attendence"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_unskilled_takeAttendance"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/unskilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_skilled_payment"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/skilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_second_sec"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="PAYMENT"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_unskilled_payment"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/unskilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_viewAllAttendance"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="VIEW"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_second_sec"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="Attendance Report"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/downloadAttendance"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="Download"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_view_advancesReprt"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="VIEW"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_second_sec"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="Advances Report"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/downloadAdvances"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="Download"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_compileList"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="VIEW"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_second_sec"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="Compiled Report"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/downloadCompile"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="Download"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/skilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <!--            <androidx.appcompat.widget.AppCompatButton-->
+                    <!--                android:id="@+id/btn_viewAllAttendance"-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_weight="1.15"-->
+                    <!--                android:layout_height="match_parent"-->
+                    <!--                android:layout_gravity="center"-->
+                    <!--                android:gravity="center"-->
+                    <!--                android:text="@string/view_all_attendence"-->
+                    <!--                android:letterSpacing="0.12"-->
+                    <!--                android:background="@drawable/color_second_sec"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                android:layout_marginStart="15dp"-->
+                    <!--                />-->
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/unskilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_skilled_viewAttendance"
+
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/color_secand"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/skilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <!--            <androidx.appcompat.widget.AppCompatButton-->
+                    <!--                android:id="@+id/downloadAttendance"-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_weight="1.15"-->
+                    <!--                android:layout_height="match_parent"-->
+                    <!--                android:layout_gravity="center"-->
+                    <!--                android:gravity="center"-->
+                    <!--                android:text="@string/download_attendence"-->
+                    <!--                android:letterSpacing="0.12"-->
+                    <!--                android:background="@drawable/color_second_sec"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:textSize="13sp"-->
+                    <!--                android:layout_marginStart="15dp"-->
+                    <!--                />-->
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.15"
+                        android:background="@drawable/color_shaed_ok"
+                        android:gravity="center"
+                        android:letterSpacing="0.15"
+                        android:text="@string/unskilled"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="3.3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_fundrequest"
+                        android:layout_width="135dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drawable_black_background"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="@string/fund_request"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_payment_activity"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/drawable_black_background"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="@string/advances"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+            </ScrollView>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_afterLocationDetected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_location_detected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/location_successfully_detected"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.1"
+                        android:text="@string/city"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="2"
+                        android:letterSpacing="0.1"
+                        android:text="@string/lucknow"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.1"
+                        android:text="@string/pin_code"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_pinCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="2"
+                        android:letterSpacing="0.1"
+                        android:text="@string/_226016"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.1"
+                        android:text="@string/address"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="2"
+                        android:letterSpacing="0.1"
+                        android:text="Jankipuram,Lucknow"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/color_secand"
+                    android:gravity="center"
+                    android:letterSpacing="0.15"
+                    android:text="@string/submit_details"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bottom_layout"
+        android:orientation="horizontal"
+        android:weightSum="3.02">
+
+        <LinearLayout
+            android:id="@+id/ll_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_selected"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:cropToPadding="true"
+                android:src="@drawable/ic_home" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/ll_manpower"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:cropToPadding="true"
+                android:src="@drawable/ic_manpower" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Man-Power"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/ll_payment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:cropToPadding="true"
+                android:src="@drawable/ic_payment" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Cash"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

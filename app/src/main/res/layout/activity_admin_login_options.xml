@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back420"
+    tools:context=".Activity.AdminLoginOptions">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="140dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/cream"
+            android:gravity="center"
+            android:text="@string/select_any_one_option_compulsary"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@color/cream"
+            android:visibility="gone"
+            android:weightSum="3.5">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:src="@drawable/opt1"/>
+        <RadioButton
+            android:id="@+id/rb_opt1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="@string/do_you_wish_to_take_reporting_of_your_site_by_appointing_associate"
+            android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txt_km_opt1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/know_more"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:background="@drawable/button_success"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@color/sky_blue"
+            android:layout_marginTop="16dp"
+            android:weightSum="3.5">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:src="@drawable/opt2"/>
+            <RadioButton
+                android:id="@+id/rb_opt2"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:text="@string/do_you_wish_to_do_reporting_of_your_site_by_yourself"/>
+            <TextView
+                android:id="@+id/txt_km_opt2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/know_more"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:background="@drawable/button_success"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@color/cream"
+            android:weightSum="3.5">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:src="@drawable/opt3"/>
+
+            <TextView
+                android:id="@+id/rb_opt3"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:checked="true"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="@string/do_you_wish_to_keep_both_the_above_options_as_per_your_convenience"/>
+            <TextView
+                android:id="@+id/txt_km_opt3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/know_more"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:background="@drawable/button_success"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/slider_card"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorEnabled="true"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="1.4dp"
+                    app:sliderIndicatorSelectedColor="#0019A6"
+                    app:sliderIndicatorUnselectedColor="@android:color/white"
+                    app:sliderScrollTimeInSec="3" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/let_s_begin"
+            android:background="@drawable/button_success"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>

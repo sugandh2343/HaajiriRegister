@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_payable_amount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txt_labourId"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="1001"
+            android:textColor="@color/blue"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/gray_more_light"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/requested_amount"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txt_to_pay_amount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="payable"
+            android:textColor="@color/blue"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/gray_more_light"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/payable_amt"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txt_payable_amount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Payable Amount"
+            android:textColor="@color/blue"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/gray_more_light"/>
+    <LinearLayout
+        android:id="@+id/ll_askWhy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:weightSum="4"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+        <EditText
+            android:id="@+id/et_your_remark"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:textSize="16sp"
+            android:elegantTextHeight="true"
+            android:layout_height="wrap_content"
+            android:hint="@string/speak_type_remark"
+            android:textColor="@color/darkGreen"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/iv_mic"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+
+            android:src="@drawable/ic_baseline_mic_24"/>
+
+
+
+
+    </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:background="@drawable/button_success"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_allowed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_allow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/payment"
+            android:background="@color/lightGreen"
+            android:textColor="@color/black"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:background="@color/red"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/gray_more_light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_reconcile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/requested_reconcile_amount"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/txt_reconcile_amount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="payable"
+                android:textColor="@color/blue"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/gray_more_light"/>
+        <LinearLayout
+            android:id="@+id/ll_askWhy1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:weightSum="4"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+            <EditText
+                android:id="@+id/et_your_remark1"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:textSize="16sp"
+                android:elegantTextHeight="true"
+                android:layout_height="wrap_content"
+                android:hint="@string/speak_type_remark"
+                android:textColor="@color/darkGreen"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_mic1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+
+                android:src="@drawable/ic_baseline_mic_24"/>
+
+
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_reconcile_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:background="@drawable/button_success"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back420"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/this_is_the_latest_cash_request_received_on_the_site"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="160dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/request_amount"
+            android:layout_marginStart="24dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txt_requested_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="40000000"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="4">
+       <RadioButton
+           android:id="@+id/rb_allow_full"
+           android:layout_width="match_parent"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:text="@string/allow_full_amount"
+           android:textColor="@color/black"/>
+        <RadioButton
+            android:id="@+id/rb_allow_partial"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/allow_partial_amount"
+            android:textColor="@color/black"/>
+        <RadioButton
+            android:id="@+id/rb_deny"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/deny_reuest"
+            android:textColor="@color/black"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_hold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/color_secand"
+            android:gravity="center"
+            android:letterSpacing="0.15"
+            android:text="@string/hold"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/et_partitial_amount"
+            android:layout_width="match_parent"
+
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+           android:hint="@string/enter_amt"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:inputType="number"
+            android:textColorHint="@color/white"
+            android:paddingStart="12dp"
+            android:background="@drawable/shape_edit_background"
+            android:textSize="14sp"
+            android:padding="8dp"
+
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txt_full_amount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=""
+            android:layout_marginEnd="12dp"
+            android:padding="8dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+
+        android:background="@drawable/color_secand"
+        android:gravity="center"
+        android:letterSpacing="0.15"
+        android:text="@string/submit"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+
+
+
+</LinearLayout>

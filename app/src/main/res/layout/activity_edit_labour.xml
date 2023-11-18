@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="8dp"
+    android:background="@drawable/back420"
+    android:layout_marginEnd="8dp"
+    tools:context=".Activity.LabourRegistration">
+    <LinearLayout
+        android:id="@+id/toolbarll"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_form_labour_register"
+        android:layout_width="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:background="@color/red"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="center"
+            android:text="@string/edit_details"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/bottom_layout"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disclaimer"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hajiri_register_do_not_take_any_responsbility_of_the_text_result_while_using_speech_to_text_facility_check_the_sentence_word_at_yopur_end_while_using_speech_to_text"
+                android:layout_gravity="center"
+                android:gravity="center" android:background="@color/black"
+                android:textColor="@color/white"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/shape_edit_background"
+            android:weightSum="9">
+
+            <EditText
+                android:id="@+id/txt_labour_name"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:inputType="textCapSentences"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:lastBaselineToBottomHeight="@null"
+                android:hint="@string/name_of_labour"
+                android:textColorHint="@color/white"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:textColor="@color/white"
+                tools:targetApi="p" />
+            <ImageView
+                android:id="@+id/iv_name_mic"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_mic_24"/>
+            <ImageButton
+                android:id="@+id/iv_name_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                android:background="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_edit_background"
+            android:weightSum="9">
+
+            <EditText
+                android:id="@+id/txt_labour_fathers_name"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="8dp"
+                android:textColorHint="@color/white"
+                android:inputType="textCapSentences"
+                android:layout_marginEnd="8dp"
+                android:lastBaselineToBottomHeight="@null"
+                android:hint="@string/labour_father_name"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:textColor="@color/white"
+                tools:targetApi="p" />
+            <ImageView
+                android:id="@+id/iv_father_name_mic"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_mic_24"/>
+            <ImageButton
+                android:id="@+id/iv_father_name_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                android:background="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_edit_background"
+            android:weightSum="9">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_labour_site_name"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:lastBaselineToBottomHeight="@null"
+                android:hint="@string/enter_site_name"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:textColor="@color/black"
+                tools:targetApi="p" />
+            <ImageView
+                android:id="@+id/iv_site_name_mic"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_mic_24"/>
+            <ImageButton
+                android:id="@+id/iv_site_name_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                android:background="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/shape_edit_background"
+            android:weightSum="9">
+
+
+            <EditText
+                android:id="@+id/txt_labour_id_number"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColorHint="@color/white"
+                android:lastBaselineToBottomHeight="@null"
+                android:hint="@string/id_num"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:textColor="@color/white"
+                tools:targetApi="p" />
+            <ImageView
+                android:id="@+id/iv_verification_id_mic"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_mic_24"/>
+            <ImageButton
+                android:id="@+id/iv_verification_id_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                android:background="@null" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/txt_labour_wages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:textColorHint="@color/white"
+            android:lastBaselineToBottomHeight="@null"
+            android:hint="@string/enter_wages"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_edit_background"
+            android:textColor="@color/white"
+            android:inputType="numberSigned"
+            tools:targetApi="p" />
+        <RelativeLayout
+            android:id="@+id/rl_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginTop="8dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+
+
+                android:layout_centerInParent="true"
+                android:src="@drawable/my_profile" />
+
+            <ImageView
+                android:id="@+id/edit_imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@id/profile_imageView"
+                android:layout_alignEnd="@id/profile_imageView"
+                android:layout_below="@+id/profile_imageView"
+                android:layout_marginTop="-32dp"
+                android:src="@drawable/edit_profile_image"/>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_labour_btn"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_details"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:background="@drawable/button_success"/>
+    </LinearLayout>
+
+</LinearLayout>

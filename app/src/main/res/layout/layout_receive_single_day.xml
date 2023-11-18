@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/cream"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="4dp">
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3.03"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/rec_amount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/receiving"
+            android:visibility="visible"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:layout_weight="0.01"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:layout_weight="0.01"/>
+        <TextView
+            android:id="@+id/rec_from"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/received_from"
+            android:visibility="visible"
+            android:textColor="@color/black"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:layout_weight="0.01"/>
+    </LinearLayout>
+</LinearLayout>

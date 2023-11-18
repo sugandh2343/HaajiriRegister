@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back420"
+
+    android:orientation="vertical"
+    tools:context=".Activity.ShowAttendanceActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+        <include layout="@layout/layout_toolbar"
+            android:id="@+id/toolbar_layout"/>
+        <Spinner
+            android:id="@+id/spinner_searchType"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_height="50dp"
+            android:spinnerMode="dropdown"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_today"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/today_s"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:background="@drawable/button_success" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_custom"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/custom"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:background="@drawable/button_success"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/Fromdate_et"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/from"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawablePadding="8dp"
+                android:inputType="none"
+                android:padding="8dp" />
+            <EditText
+                android:id="@+id/Todate_et"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/to"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawablePadding="8dp"
+                android:inputType="none"
+                android:padding="8dp" />
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:background="@drawable/button_success"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/message"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:nestedScrollingEnabled="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:weightSum="8">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_showAttendance"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:visibility="visible"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/shape_recycler_view_background"
+                android:layout_marginTop="16dp"
+                tools:itemCount="7"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_parent_class"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_status"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="16dp"
+                android:scrollbars="horizontal"
+                tools:itemCount="7"
+                tools:listitem="@layout/layout_child1"
+                android:background="@drawable/recycler_view_coloured_background"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_download_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Download Report"
+            android:background="@drawable/button_success"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
